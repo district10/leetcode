@@ -1,16 +1,79 @@
 LeetCode
 ========
 
-这是 [district10/notes: 我的笔记。](https://github.com/district10/notes) 的一部分。
+-   代码来自 [haoel/leetcode: LeetCode Problems' Solutions](https://github.com/haoel/leetcode)。
+-   在线查看：<http://tangzx.qiniudn.com/notes/leetcode>。
 
--   [【Part I】](part1.html){title="part1.md"}
--   [【Part II】](part2.html){title="part2.md"}
+#.  Two Sum -<
 
----
+    :   from: [Two Sum | LeetCode OJ](https://leetcode.com/problems/two-sum/)
 
-###LeetCode Algorithm
+        @include <-=leetcode/problems/leetcode-001-two-sum.md=
 
-(Notes: "&hearts;" means you need to buy a book from Leetcode)
+        solution #1:
+
+        ```cpp
+        @include <-=leetcode/algorithms/cpp/twoSum/twoSum.cpp=
+        ```
+
+        see more -<
+
+        :   ```cpp
+            @include <-=leetcode/algorithms/cpp/twoSum/twoSum.II.cpp=
+            ```
+
+            ```cpp
+            @include <-=leetcode/algorithms/cpp/twoSum/twoSum.III.cpp=
+            ```
+
+#.  Add Two Numbers -<
+
+    :   from: [Add Two Numbers | LeetCode OJ](https://leetcode.com/problems/add-two-numbers/)
+
+        @include <-=leetcode/problems/leetcode-002-add-two-numbers.md=
+
+        ```cpp
+        @include <-=leetcode/algorithms/cpp/addTwoNumbers/addTwoNumbers.cpp=
+        ```
+
+#.  Longest Substring Without Repeating Characters -<
+
+    :   from: [Longest Substring Without Repeating Characters | LeetCode OJ](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+        @include <-=leetcode/problems/leetcode-003-longest-substring-without-repeating-characters.md=
+
+        ```cpp
+        @include <-=leetcode/algorithms/cpp/longestSubstringWithoutRepeatingCharacters/longestSubstringWithoutRepeatingCharacters.cpp=
+        ```
+
+        里面的 `memset(m, -1, sizeof(m));` 是把每个字节初始化为 0xFF（不要理解成把每个
+        元素初始化为 -1，虽然这里确实是这样），见 <https://github.com/district10/notes/issues/2>。
+
+#.  Median of Two Sorted Arrays -<
+
+    :   from: [Median of Two Sorted Arrays | LeetCode OJ](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+
+        @include <-=leetcode/problems/leetcode-004-median-of-two-sorted-arrays.md=
+
+        ```cpp
+        @include <-=leetcode/algorithms/cpp/medianOfTwoSortedArrays/medianOfTwoSortedArrays.cpp=
+        ```
+#.  Longest Palindromic Substring -<
+
+    :   from: [Longest Palindromic Substring | LeetCode OJ](https://leetcode.com/problems/longest-palindromic-substring/)
+        @include <-=leetcode/problems/leetcode-005-longest-palindromic-substring.md=
+
+        ```cpp
+        @include <-=leetcode/algorithms/cpp/longestPalindromicSubstring/longestPalindromicSubstring.cpp=
+        ```
+
+@include <-=leetcode/algorithms/=
+@include <-=leetcode/algorithms/=
+@include <-=leetcode/algorithms/=
+@include <-=leetcode/algorithms/=
+@include <-=leetcode/algorithms/=
+@include <-=leetcode/algorithms/=
+@include <-=leetcode/algorithms/=
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
@@ -286,25 +349,3 @@ LeetCode
 |8|[String to Integer (atoi)](https://oj.leetcode.com/problems/string-to-integer-atoi/)| [C++](./algorithms/cpp/stringToIntegerAtoi/stringToIntegerAtoi.cpp)|Easy|
 |7|[Reverse Integer](https://oj.leetcode.com/problems/reverse-integer/)| [C++](./algorithms/cpp/reverseInteger/reverseInteger.cpp)|Easy|
 |6|[ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/)| [C++](./algorithms/cpp/zigZagConversion/zigZagConversion.cpp)|Easy|
-|5|[Longest Palindromic Substring](https://oj.leetcode.com/problems/longest-palindromic-substring/)| [C++](./algorithms/cpp/longestPalindromicSubstring/longestPalindromicSubstring.cpp)|Medium|
-|4|[Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/)| [C++](./algorithms/cpp/medianOfTwoSortedArrays/medianOfTwoSortedArrays.cpp)|Hard|
-|3|[Longest Substring Without Repeating Characters](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/)| [C++](./algorithms/cpp/longestSubstringWithoutRepeatingCharacters/longestSubstringWithoutRepeatingCharacters.cpp)|Medium|
-|2|[Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/)| [C++](./algorithms/cpp/addTwoNumbers/addTwoNumbers.cpp)|Medium|
-|1|[Two Sum](https://oj.leetcode.com/problems/two-sum/)| [C++](./algorithms/cpp/twoSum/twoSum.cpp)|Medium|
-
-
-###LeetCode Shell
-
-
-| # | Title | Solution | Difficulty |
-|---| ----- | -------- | ---------- |
-|4|[Tenth Line](https://leetcode.com/problems/tenth-line/)| [Bash](./shell/TenthLine.sh)|Easy|
-|3|[Transpose File](https://leetcode.com/problems/transpose-file/)| [Bash](./shell/TransposeFile.sh)|Medium|
-|2|[Valid Phone Numbers](https://leetcode.com/problems/valid-phone-numbers/)| [Bash](./shell/ValidPhoneNumbers.sh)|Easy|
-|1|[Word Frequency](https://leetcode.com/problems/word-frequency/)| [Bash](./shell/WordFrequency.sh)|Medium|
-
-###LintCode
-| # | Title | Solution | Difficulty |
-|---| ----- | -------- | ---------- |
-|1|[Search in a big sorted array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[Java](./algorithms/java/src/searchInABigSortedArray/searchInABigSortedArray.java)|Medium|
-|2|[Search Range in Binary Search Tree](http://www.lintcode.com/en/problem/search-range-in-binary-search-tree/) | [Java](./algorithms/java/src/searchRangeInBinarySearchTree/searchRangeInBinarySearchTree.java)|Medium|

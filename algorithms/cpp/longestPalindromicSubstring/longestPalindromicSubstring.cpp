@@ -1,15 +1,3 @@
-// Source : https://oj.leetcode.com/problems/longest-palindromic-substring/
-// Author : Hao Chen
-// Date   : 2014-07-17
-
-/********************************************************************************** 
-* 
-* Given a string S, find the longest palindromic substring in S. 
-* You may assume that the maximum length of S is 1000, 
-* and there exists one unique longest palindromic substring.
-*               
-**********************************************************************************/
-
 #include <string.h>
 #include <iostream>
 #include <string>
@@ -28,7 +16,6 @@ string findPalindrome(string s, int left, int right)
     return s.substr(left+1, right-left-1);
 }
 
-
 // This is the common solution.
 // Actuatlly it's faster than DP solution under Leetcode's test
 // the below optimized DP solution need 700ms+, this needs around 250ms.
@@ -37,20 +24,20 @@ string longestPalindrome_recursive_way(string s) {
     if (n<=1) return s;
 
     string longest;
-    
+
     string str;
     for (int i=0; i<n-1; i++) {
         str = findPalindrome(s, i, i);
         if (str.size() > longest.size()){
             longest = str;
-        } 
+        }
         str = findPalindrome(s, i, i+1);
         if (str.size() > longest.size()){
             longest = str;
-        } 
+        }
     }
 
-    return longest; 
+    return longest;
 }
 
 
@@ -61,7 +48,7 @@ string longestPalindrome_dp_way(string s) {
 
     int n = s.size();
     if (n<=1) return s;
-    
+
     //Construct a matrix, and consdier matrix[i][j] as s[i] -> s[j] is Palindrome or not.
 
     //using char or int could cause the `Memory Limit Error`
@@ -70,12 +57,12 @@ string longestPalindrome_dp_way(string s) {
     //using bool type could cause the `Time Limit Error`
     vector< vector<bool> > matrix (n, vector<bool>(n));
 
-    // Dynamic Programming 
+    // Dynamic Programming
     //   1) if i == j, then matrix[i][j] = true;
     //   2) if i != j, then matrix[i][j] = (s[i]==s[j] && matrix[i+1][j-1])
     for (int i=n-1; i>=0; i--){
         for (int j=i; j<n; j++){
-            // The following if statement can be broken to 
+            // The following if statement can be broken to
             //   1) i==j, matrix[i][j] = true
             //   2) the length from i to j is 2 or 3, then, check s[i] == s[j]
             //   3) the length from i to j > 3, then, check s[i]==s[j] && matrix[i+1][j-1]
@@ -127,7 +114,7 @@ string longestPalindrome_dp_opt_way(string s) {
         }
     }
 
-    for (int i=0; i<n; i++) { 
+    for (int i=0; i<n; i++) {
         delete [] matrix[i];
     }
     delete [] matrix;
